@@ -1,0 +1,6 @@
+{
+  "/page": "app/page.js",
+  "/map/page": "app/map/page.js",
+  "/quest/[lat]/[lon]/page": "app/quest/[lat]/[lon]/page.js",
+  "/qrscanner/page": "app/qrscanner/page.js"
+}
