@@ -17,7 +17,7 @@ function SDKProviderError({ error }: SDKProviderErrorProps) {
 
 </h1>
       <blockquote>
-        <code>
+        <code className=' text-center font-extrabold text-scin-base text-xl  '>
           {error instanceof Error
             ? error.message
             : JSON.stringify(error)}
