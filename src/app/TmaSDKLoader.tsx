@@ -10,7 +10,12 @@ interface SDKProviderErrorProps {
 function SDKProviderError({ error }: SDKProviderErrorProps) {
   return (
     <div>
-      Oops. Something went wrong.
+
+  <h1 className=' text-center font-extrabold text-scin-base text-xl  '>
+Ууп что то пошло не так  ... <br/>
+Если что приложение запукается только через telegram)
+
+</h1>
       <blockquote>
         <code>
           {error instanceof Error
@@ -23,11 +28,17 @@ function SDKProviderError({ error }: SDKProviderErrorProps) {
 }
 
 function SDKProviderLoading() {
-  return <div>SDK is loading.</div>;
+  return(
+    <h1 className=' text-center font-extrabold text-scin-base text-xl  '>
+      Загрузка ...
+  </h1>)
 }
 
 function SDKInitialState() {
-  return <div>Waiting for initialization to start.</div>;
+  return(
+  <h1 className=' text-center font-extrabold text-scin-base text-xl  '>
+Ждем инициализации для начала ...
+</h1>)
 }
 
 /**
