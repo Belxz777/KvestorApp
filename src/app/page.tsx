@@ -1,7 +1,5 @@
 'use client'
 import { useEffect,useRef,useState,useMemo } from 'react'
-import mainImage from '../../public/mainImg.png'
-import otherImage from '../../public/otherMain.png'
 import pint from '../../public/pins.png'
 import { AiOutlineAlignRight, AiOutlineCompress, AiOutlineIssuesClose } from "react-icons/ai";
 import Image from 'next/image';

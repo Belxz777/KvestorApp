@@ -574,9 +574,6 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.static {
-  position: static;
-}
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -631,6 +628,9 @@ video {
 .bg-button-base {
   background-color: var(--tg-theme-button-color);
 }
+.bg-hint-base {
+  background-color: var(--tg-theme-hint-color);
+}
 .bg-orange-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
@@ -641,9 +641,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-hint-base {
-  background-color: var(--tg-theme-hint-color);
 }
 .px-14 {
   padding-left: 3.5rem;
