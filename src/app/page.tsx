@@ -5,7 +5,7 @@ import { AiOutlineAlignRight, AiOutlineCompress, AiOutlineIssuesClose } from "re
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import { useBackButton, useInitData, useMainButton,useThemeParams,usePopup, useMiniApp,useQRScanner } from '@tma.js/sdk-react';
+import { useInitData,  useMiniApp} from '@tma.js/sdk-react';
 
 export default function General() {
   const initData = useInitData()

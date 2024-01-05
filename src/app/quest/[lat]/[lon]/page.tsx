@@ -68,7 +68,7 @@ const handleAnswerClick = (selectedVariant: string) => {
 
 const calculateScore = () => {
   const correctAnswers = userAnswers.filter((answer) => answer.isCorrect).length;
-  if(correctAnswers == quizData.length){
+  if(correctAnswers == quizData.length - 1 ){
     return `Ты ответил правильно на ${correctAnswers} из  ${quizData.length} !
     Молодец!!!`
   }

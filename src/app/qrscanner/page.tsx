@@ -5,21 +5,21 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import{ motion} from 'framer-motion'
 import { AiOutlineAim, AiOutlineArrowLeft } from "react-icons/ai";
-function Scan() {
+export default function Scaner() {
   type ScanResult = {
     text: string;
   }  
   const [data, setData] = useState<boolean>();
   const [mdata, setmData] = useState<number[]>([]);
   const router = useRouter()
-  const fethsa =(result:string)=>{
-    const coordinatesArray  = result.split(',').map(coord => parseFloat(coord));
+  const RequestFunc= async(result:string)=>{
+    const coordinatesArray  =  await result.split(',').map(coord => parseFloat(coord));
     if(coordinatesArray.length!==2){
       setData(false)
    }
    else{
     setmData(coordinatesArray)
-    router.push(`https://4qf73x8p-3000.euw.devtunnels.ms/quest/${coordinatesArray[0]}/${coordinatesArray[1]}`)
+    await router.push(`https://4qf73x8p-3000.euw.devtunnels.ms/quest/${coordinatesArray[0]}/${coordinatesArray[1]}`)
    }
   }
   return (
@@ -33,7 +33,7 @@ function Scan() {
           onResult={(result: any , error: any) => {
             if (result) {
               setData(result?.text)
-              fethsa(result?.text)
+           RequestFunc(result?.text)
          // alert(coordinatesArray)
 
             }
@@ -68,5 +68,3 @@ function Scan() {
     </div>
   );
   }
-
-export default Scan;

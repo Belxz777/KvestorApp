@@ -7,7 +7,7 @@ import axios from 'axios'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 type Props = {}
 
-export default function page({}: Props) {
+export default async function Karta ({}: Props) {
     const placeRef= useRef()
     type augedInfo =  {
     ip:number,
@@ -85,12 +85,11 @@ export default function page({}: Props) {
 </button>
     <div className='  w-full '>
 {
-  quizData[0].id == 0 ? <>
+  quizData[0].id == 0 ? 
         <YMaps key={'c04094f5-7ea3-4e2d-9305-f0be2330dfd6'} >
 <Map defaultState={{ center: [56.849605, 53.205283] , zoom: 18} }  width={width}  height={height} >
-
 <Button
-      options={{ maxWidth: 90 }}
+      options={{ maxWidth: 190 }}
       data={{ content: "К сожаление бекенд не работает " }}
       defaultState={{ selected: false }}
 >
@@ -98,7 +97,6 @@ export default function page({}: Props) {
 </Button>
 </Map>
 </YMaps>
-  </>
   :
         <YMaps key={'c04094f5-7ea3-4e2d-9305-f0be2330dfd6'} >
 <Map defaultState={{ center: [augedInfo.lat, augedInfo.lon] , zoom: 18} }  width={width}  height={height} >

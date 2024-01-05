@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import QRCode from "react-qr-code";
 
-function Generate() {
+export default function Generator() {
   const [qrCodeValue, setQrCodeValue] = useState("");
 
   return (
@@ -23,5 +23,3 @@ function Generate() {
     </div>
   );
 }
-
-export default Generate;
